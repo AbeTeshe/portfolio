@@ -1,0 +1,94 @@
+.header {
+    height: 70px;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    color: white;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-links {
+    display: flex;
+    
+}
+.checkbtn {
+    display: none;
+}
+.menuIcon {
+    font-size: 40px !important;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+.header-links ul {
+    display: flex;
+}
+.header-links li {
+    list-style: none;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header-links a {
+    color: white;
+    margin-top: 10px;
+}
+
+.header-links a:hover, .header-links a:active {
+    text-decoration: none;
+    color: #59b256;
+}
+
+@media  screen and (max-width: 1000px) {
+    .header-links li {
+        margin-left: 30px;
+    }
+
+    .header {
+        justify-content: center;
+    }
+   
+}
+
+
+@media  screen and (max-width: 700px) {
+    .header-links ul{
+        position: fixed;
+        width: 130px;
+        height: 180px;
+        top: 55px;
+        background-color: #333;
+        flex-direction: column;
+        right: -100%;
+        text-align: center;
+        transition:  all 0.5s;
+    }
+    .header-links li {
+        margin-left: 0px;
+    }
+    .header {
+        justify-content: space-between;
+    }
+
+    #check:checked ~ .ulClass {
+        right: 50px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    
+    .menuIcon {
+        display: block;
+        margin-right: 100px;
+    }
+    .header-title {
+        margin-left: 50px;
+    }
+}

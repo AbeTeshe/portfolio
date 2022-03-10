@@ -1,0 +1,285 @@
+.resume {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    padding-top: 20px;
+}
+
+.resume-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.resume-sub{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+
+.resume-underline {
+    width: 200px;
+    height: 3px;
+    background-color: #bbb;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.resume-underline:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 11px;
+    border-radius: 5px;
+    top: -4px;
+    left: 75px;
+    background-color: #59b256;
+}
+
+
+.resumeContainer {
+    display: flex;
+    width: 100%;
+}
+.resumeLeft {
+    display: flex;
+}
+
+.icons {
+    width: 40px;
+    background-color: #59b256;
+    
+}
+
+.icons p {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px 5px;
+}
+.icons  p:first-child {
+    margin-top: 40px;
+}
+
+.icons p:last-child {
+    margin-bottom: 20px;
+}
+
+.titles {
+   margin-top: 40px;
+   margin-bottom: 20px;
+   margin-right: 50px;
+}
+
+.titles p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 5px;
+    box-shadow: inset 0 0 0 0 #59b256;
+    width: 280px;
+    border-radius: 0 20px 20px 0;
+    transition: ease-out 0.3s;
+}
+ .active {
+    background-color: #59b256;
+}
+
+.titles p:hover {
+    box-shadow: inset 280px 0 0 0 #59b256;
+    
+}
+
+.details {
+    margin-top: 40px;
+    width: 50%;
+    margin-left: 50px;
+    position: relative;
+}
+
+.details:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 110%;
+    top: -40px;
+    left: -50px;
+    background-color: #bbb;
+    box-shadow:3px 3px 5px 0px rgba(0,0,0,0.25);
+}
+
+.experience, .education {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.experience h3, .education h3 {
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+}
+
+.experience h3:after, .education h3:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 0;
+    left: -30px;
+    background-color: #59b256;
+}
+
+.duration {
+    margin-top: 3px;
+    color: #59b256;
+}
+
+.skills{
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+.skills h4, .language h4, .interest h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+}
+.language, .interest  {
+    margin-left: 20px;
+    
+}
+.interest h4 {
+    margin-bottom: 30px;
+}
+
+
+
+.skills h4:after, .language h4:after, .interest h4:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #59b256;
+    left: -30px;
+    top: 5px;
+}
+
+.box {
+    width: 200px;
+    height: 13px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.box:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 13px;
+    border: 1px solid #59b256;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .titles {
+        margin-right: 20px;
+    }
+
+    .details {
+        width: 80%;
+    }
+    
+    .titles p {
+        width: 200px;
+    }
+    .titles p:hover {
+        box-shadow: inset 200px 0 0 0 #59b256;
+        
+    }
+    
+   .skills, .experience, .education, .language, .interest  {
+       margin-left: 0px;
+   }
+
+   .skills {
+    flex-direction: column;
+    }
+
+    .skill-item {
+        display: flex;
+    }
+
+    .skills h4 {
+        width: 120px;
+        margin-left: 0px;
+    }
+   
+} 
+
+
+
+
+@media screen and (max-width: 700px) {
+    .resumeContainer{
+        flex-direction: column;
+        width: 100%;
+    }
+    .icons {
+        display: none;
+    }
+
+    .titles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .titles p {
+        width: 20%;
+        border-radius: 10px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    
+   
+    .titles p:hover {
+        box-shadow: inset 150px 0 0 0 #59b256;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titles {
+        display: none;
+    }
+    .icons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        background-color: #222;
+    }
+    
+    .icons p {
+        margin-bottom: 0;
+        text-align: center;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    
+    .icons  p:first-child {
+        margin-top: 0;
+    }
+
+    .icons p:last-child {
+        margin-bottom: 0;
+    }
+}
+
